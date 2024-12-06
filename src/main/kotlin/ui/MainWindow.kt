@@ -1,0 +1,35 @@
+package com.jjoon.ui
+
+
+import com.jjoon.ui.main.*
+import java.awt.BorderLayout
+import javax.swing.JFrame
+
+class MainWindow: JFrame() {
+    private val textArea = MainTextArea()
+    private val textField = MainTextField(textArea, this)
+    private val scrollPane = MainScrollPane(textArea)
+
+    init {
+        //설정
+        isUndecorated = true
+        title = "Console-like Input"
+        setSize(500, 400)
+        defaultCloseOperation = EXIT_ON_CLOSE
+        layout = BorderLayout()
+
+        //위치: MainTextArea 인데 스크롤 추가는 여기서 해씀
+        add(scrollPane, BorderLayout.CENTER)
+
+        //위치: MainTextField
+        add(textField, BorderLayout.SOUTH)
+
+        // CustomTitleBar 클래스 인스턴스화
+        val customTitleBar = MainTitleBar(this)
+        add(customTitleBar, BorderLayout.NORTH) // 타이틀 바 추가
+
+
+        // JFrame 보이기
+        isVisible = true
+    }
+}

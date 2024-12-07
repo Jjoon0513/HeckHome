@@ -13,7 +13,7 @@ class MainWindow: JFrame() {
     init {
         //설정
         isUndecorated = true
-        title = "Console-like Input"
+        title = "HackHome"
         setSize(500, 400)
         defaultCloseOperation = EXIT_ON_CLOSE
         layout = BorderLayout()
@@ -25,8 +25,8 @@ class MainWindow: JFrame() {
         add(textField, BorderLayout.SOUTH)
 
         // CustomTitleBar 클래스 인스턴스화
-        val customTitleBar = MainTitleBar(this)
-        add(customTitleBar, BorderLayout.NORTH) // 타이틀 바 추가
+        val customTitleBar = MainTitleBar(this, textArea, textField)
+        add(customTitleBar, BorderLayout.NORTH)
 
 
         // JFrame 보이기

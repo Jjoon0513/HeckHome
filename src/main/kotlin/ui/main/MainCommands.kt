@@ -11,12 +11,18 @@ class MainCommands(
         input: String,
     ) {
         when (input.trim()) {
+            //종료 명령어
             "exit", "bye" -> {
                 textArea.append("Exiting...\n")
-                mainWindow.dispose() // JFrame 종료
+                mainWindow.dispose()
             }
 
-            "clear" -> textArea.text = ""
+            //전체 삭제
+            "clear" -> {
+                textArea.text = ""
+            }
+
+            //도움!!!!!!!!!!!!!!!!!
             "help" -> {
                 textArea.append("Available commands:\n")
                 textArea.append("- exit, bye: Exit the program\n")
@@ -24,8 +30,15 @@ class MainCommands(
                 textArea.append("- help: Display this help message\n")
             }
 
-            "" -> textArea.append("")
-            else -> textArea.append("\"${input.trim()}\"is unknown command.\n")
+            //아무것도 입력하지 않았을때
+            "" -> {
+                textArea.append("")
+            }
+
+            //명령어가 아닐때
+            else -> {
+                textArea.append("\"${input.trim()}\"is unknown command.\n")
+            }
         }
     }
 }

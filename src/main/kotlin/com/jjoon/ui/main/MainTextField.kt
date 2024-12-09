@@ -2,9 +2,9 @@ package com.jjoon.ui.main
 
 import com.jjoon.ui.MainWindow
 import com.jjoon.util.ConfigPull
+import com.jjoon.ui.main.commands.MainCommands
 import java.awt.Dimension
 import java.awt.Font
-import java.awt.Insets
 import java.awt.event.ActionEvent
 import javax.swing.BorderFactory
 import javax.swing.JTextField

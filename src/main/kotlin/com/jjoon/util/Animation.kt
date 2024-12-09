@@ -1,4 +1,4 @@
-package util
+package com.jjoon.util
 
 import java.awt.Color
 import kotlin.math.*

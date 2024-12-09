@@ -1,8 +1,8 @@
 package com.jjoon.ui.main.titlebar
 
 import com.jjoon.util.ConfigPull
-import util.Animation
-import util.interpolateColor
+import com.jjoon.util.Animation
+import com.jjoon.util.interpolateColor
 import java.awt.Color
 import java.awt.Insets
 import java.awt.event.MouseAdapter
